@@ -4,6 +4,8 @@ iw.component.se.agura.applications.meeting.fee.presentation.MeetingParticipantsG
 iw.component.se.agura.applications.meeting.fee.presentation.MeetingReport.name=MeetingReport
 iw.component.se.agura.applications.meeting.fee.presentation.MeetingReportCertifier.name=MeetingReportCertifier
 iw.component.se.agura.applications.meeting.fee.presentation.MeetingReportEditor.name=MeetingReportEditor
+meeting.fee.application_accepted=Arvodesrapporten \u00E4r beviljad.
+meeting.fee.application_rejected=Arvodesrapporten \u00E4r avslagen.
 meeting.fee.application_saved=Application saved.
 meeting.fee.application_sent=Your application has been sent.
 meeting.fee.assignment_from=Assignment from
