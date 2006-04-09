@@ -1,5 +1,5 @@
 /*
- * $Id: MeetingReportCertifier.java,v 1.11 2005/03/30 08:14:37 laddi Exp $
+ * $Id: MeetingReportCertifier.java,v 1.12 2006/04/09 11:47:32 laddi Exp $
  * Created on 25.11.2004
  *
  * Copyright (C) 2004 Idega Software hf. All Rights Reserved.
@@ -33,7 +33,7 @@ import com.idega.util.PersonalIDFormatter;
  * Last modified: 25.11.2004 09:13:11 by: anna
  * 
  * @author <a href="mailto:anna@idega.com">anna</a>
- * @version $Revision: 1.11 $
+ * @version $Revision: 1.12 $
  */
 public class MeetingReportCertifier extends MeetingFeeBlock {
 	
@@ -82,7 +82,7 @@ public class MeetingReportCertifier extends MeetingFeeBlock {
     
 		form.add(new Break());
 		form.add(getRejectButton());
-		form.add(getEditButton(iEditPage, PARAMETER_MEETING_FEE_ID, fee.getPrimaryKey().toString()));
+		form.add(getEditButton(this.iEditPage, PARAMETER_MEETING_FEE_ID, fee.getPrimaryKey().toString()));
 		form.add(getNextButton());
 		form.maintainParameter(PARAMETER_MEETING_FEE_ID);
 		
@@ -107,8 +107,8 @@ public class MeetingReportCertifier extends MeetingFeeBlock {
 	
 	private Table getCertifyingTable(IWContext iwc, MeetingFee meetingFee) throws RemoteException{
 		Table table = new Table();
-		table.setWidth(iWidth);
-		table.setCellpadding(iCellpadding);
+		table.setWidth(this.iWidth);
+		table.setCellpadding(this.iCellpadding);
 		table.setCellspacing(0);
 		int row = 1;
 		
@@ -144,8 +144,8 @@ public class MeetingReportCertifier extends MeetingFeeBlock {
 		table.setHeight(row++, 3);
 		
 		Table participantTable = new Table();
-		participantTable.setWidth(iWidth);
-		participantTable.setCellpadding(iCellpadding);
+		participantTable.setWidth(this.iWidth);
+		participantTable.setCellpadding(this.iCellpadding);
 		participantTable.setCellspacing(0);
 		table.mergeCells(1, row, table.getColumns(), row);
 		table.add(participantTable, 1, row);
@@ -183,7 +183,7 @@ public class MeetingReportCertifier extends MeetingFeeBlock {
 			log(fe);
 		}
 
-		table.setWidth(1, iHeaderColumnWidth);
+		table.setWidth(1, this.iHeaderColumnWidth);
 		table.setCellpaddingLeft(1, 0);
 		participantTable.setCellpaddingLeft(1, 0);
 		
@@ -191,6 +191,6 @@ public class MeetingReportCertifier extends MeetingFeeBlock {
 	}
 	
 	public void setEditPage(ICPage editPage) {
-		iEditPage = editPage;
+		this.iEditPage = editPage;
 	}
 }

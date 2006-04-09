@@ -1,5 +1,5 @@
 /*
- * $Id: MeetingReport.java,v 1.15 2005/02/15 15:49:58 laddi Exp $ Created on
+ * $Id: MeetingReport.java,v 1.16 2006/04/09 11:47:32 laddi Exp $ Created on
  * 24.11.2004
  * 
  * Copyright (C) 2004 Idega Software hf. All Rights Reserved.
@@ -41,7 +41,7 @@ import com.idega.util.PersonalIDFormatter;
  * Last modified: 24.11.2004 13:46:01 by: anna
  * 
  * @author <a href="mailto:anna@idega.com">anna </a>
- * @version $Revision: 1.15 $
+ * @version $Revision: 1.16 $
  */
 public class MeetingReport extends MeetingFeeBlock {
 
@@ -164,8 +164,8 @@ public class MeetingReport extends MeetingFeeBlock {
 
 	private Table pageOneMeetingReport(IWContext iwc) {
 		Table table = new Table();
-		table.setWidth(iWidth);
-		table.setCellpadding(iCellpadding);
+		table.setWidth(this.iWidth);
+		table.setCellpadding(this.iCellpadding);
 		table.setCellspacing(0);
 		int row = 1;
 
@@ -228,7 +228,7 @@ public class MeetingReport extends MeetingFeeBlock {
 			log(re);
 		}
 
-		table.setWidth(1, iHeaderColumnWidth);
+		table.setWidth(1, this.iHeaderColumnWidth);
 		// ﬂessi lína hér fyrir ne›an lagar vonandi ﬂa› a› dropdown og takkinn
 		// liggja á réttum stö›um
 		table.setWidth(1, row, Table.HUNDRED_PERCENT);
@@ -254,8 +254,8 @@ public class MeetingReport extends MeetingFeeBlock {
 
 	private Table pageTwoMeetingReport(IWContext iwc) throws RemoteException {
 		Table table = new Table();
-		table.setWidth(iWidth);
-		table.setCellpadding(iCellpadding);
+		table.setWidth(this.iWidth);
+		table.setCellpadding(this.iCellpadding);
 		table.setCellspacing(0);
 		int row = 1;
 
@@ -300,8 +300,8 @@ public class MeetingReport extends MeetingFeeBlock {
 
 	private Table pageThreeMeetingReport(IWContext iwc) throws RemoteException {
 		Table table = new Table();
-		table.setWidth(iWidth);
-		table.setCellpadding(iCellpadding);
+		table.setWidth(this.iWidth);
+		table.setCellpadding(this.iCellpadding);
 		table.setCellspacing(0);
 		table.setColumns(6);
 		int row = 1;

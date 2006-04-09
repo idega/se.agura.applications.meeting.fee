@@ -1,5 +1,5 @@
 /*
- * $Id: MeetingReportEditor.java,v 1.7 2005/02/15 14:02:29 anna Exp $ Created on
+ * $Id: MeetingReportEditor.java,v 1.8 2006/04/09 11:47:32 laddi Exp $ Created on
  * 2.12.2004
  * 
  * Copyright (C) 2004 Idega Software hf. All Rights Reserved.
@@ -37,7 +37,7 @@ import com.idega.util.PersonalIDFormatter;
  * Last modified: 2.12.2004 15:14:55 by: anna
  * 
  * @author <a href="mailto:anna@idega.com">anna </a>
- * @version $Revision: 1.7 $
+ * @version $Revision: 1.8 $
  */
 public class MeetingReportEditor extends MeetingFeeBlock {
 
@@ -139,8 +139,8 @@ public class MeetingReportEditor extends MeetingFeeBlock {
 
 	private Table getEditCertifyingTable(IWContext iwc) throws RemoteException {
 		Table table = new Table();
-		table.setWidth(iWidth);
-		table.setCellpadding(iCellpadding);
+		table.setWidth(this.iWidth);
+		table.setCellpadding(this.iCellpadding);
 		table.setCellspacing(0);
 		int row = 1;
 
@@ -222,8 +222,8 @@ public class MeetingReportEditor extends MeetingFeeBlock {
 		table.setHeight(row++, 12);
 
 		Table participantsTable = new Table();
-		participantsTable.setWidth(iWidth);
-		participantsTable.setCellpadding(iCellpadding);
+		participantsTable.setWidth(this.iWidth);
+		participantsTable.setCellpadding(this.iCellpadding);
 		participantsTable.setCellspacing(0);
 		table.mergeCells(1, row, table.getColumns(), row);
 		table.add(participantsTable, 1, row);
@@ -257,7 +257,7 @@ public class MeetingReportEditor extends MeetingFeeBlock {
 			participantsTable.add(getAmount(iwc, user, info), 6, participantsRow++);
 		}
 
-		table.setWidth(1, iHeaderColumnWidth);
+		table.setWidth(1, this.iHeaderColumnWidth);
 		table.setCellpaddingLeft(1, 0);
 		participantsTable.setCellpaddingLeft(1, 0);
 
